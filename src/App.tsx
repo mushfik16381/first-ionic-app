@@ -12,7 +12,7 @@ import {
 import { IonReactRouter } from '@ionic/react-router';
 import {  home, images, notifications,  person } from 'ionicons/icons';
 import Tab1 from './pages/Tab1';
-import Tab2 from './pages/Tab2';
+// import Tab2 from './pages/Tab2';
 import Tab3 from './pages/Tab3';
 import Tab4 from './pages/Tab4/Tab4';
 
@@ -46,7 +46,7 @@ const App: React.FC = () => (
       <IonTabs>
         <IonRouterOutlet>
           <Route path="/tab1" component={Tab1} exact={true} />
-          <Route path="/tab2" component={Tab2} exact={true} />
+          {/* <Route path="/tab2" component={Tab2} exact={true} /> */}
           <Route path="/tab2/details" component={Details} />
           <Route path="/tab3" component={Tab3} />
           <Route path="/tab4" component={Tab4} />
@@ -57,10 +57,10 @@ const App: React.FC = () => (
             <IonIcon class='icon_label' icon={home} />
             <IonLabel class='name_label'>Home</IonLabel>
           </IonTabButton>
-          <IonTabButton tab="tab2" href="/tab2">
+          {/* <IonTabButton tab="tab2" href="/tab2">
             <IonIcon class='icon_label' icon={images} />
             <IonLabel class='name_label'>Photos</IonLabel>
-          </IonTabButton>
+          </IonTabButton> */}
           <IonTabButton tab="tab3" href="/tab3">
             <IonIcon class='icon_label' icon={notifications} />
             <IonLabel class='name_label'>Notification</IonLabel>
