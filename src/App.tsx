@@ -10,10 +10,12 @@ import {
   IonTabs
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
-import { square, triangle, images } from 'ionicons/icons';
+import {  home, images, notifications,  person } from 'ionicons/icons';
 import Tab1 from './pages/Tab1';
 import Tab2 from './pages/Tab2';
 import Tab3 from './pages/Tab3';
+import Tab4 from './pages/Tab4/Tab4';
+
 import Details from './pages/Details';
 
 /* Core CSS required for Ionic components to work properly */
@@ -47,20 +49,25 @@ const App: React.FC = () => (
           <Route path="/tab2" component={Tab2} exact={true} />
           <Route path="/tab2/details" component={Details} />
           <Route path="/tab3" component={Tab3} />
+          <Route path="/tab4" component={Tab4} />
           <Route path="/" render={() => <Redirect to="/tab1" />} exact={true} />
         </IonRouterOutlet>
-        <IonTabBar slot="bottom">
+        <IonTabBar class='bottom_slot' slot="bottom">
           <IonTabButton tab="tab1" href="/tab1">
-            <IonIcon icon={triangle} />
-            <IonLabel>Tab One</IonLabel>
+            <IonIcon class='icon_label' icon={home} />
+            <IonLabel class='name_label'>Home</IonLabel>
           </IonTabButton>
           <IonTabButton tab="tab2" href="/tab2">
-            <IonIcon icon={images} />
-            <IonLabel>Photos</IonLabel>
+            <IonIcon class='icon_label' icon={images} />
+            <IonLabel class='name_label'>Photos</IonLabel>
           </IonTabButton>
           <IonTabButton tab="tab3" href="/tab3">
-            <IonIcon icon={square} />
-            <IonLabel>Tab Three</IonLabel>
+            <IonIcon class='icon_label' icon={notifications} />
+            <IonLabel class='name_label'>Notification</IonLabel>
+          </IonTabButton>
+          <IonTabButton tab="tab4" href="/tab4">
+            <IonIcon class='icon_label' icon={person} />
+            <IonLabel class='name_label'>Profile</IonLabel>
           </IonTabButton>
         </IonTabBar>
       </IonTabs>

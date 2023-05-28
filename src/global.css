@@ -149,3 +149,22 @@
     --color: white;
   }
 }
+
+.bottom_slot{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: #294271;
+  color: #fff;
+  padding: 10px;
+
+}
+.name_label{
+  color: #fff;
+  text-decoration: none;
+}
+.icon_label{
+  color: #fff;
+  padding-right: 5px;
+  font-size: 20px;
+}
